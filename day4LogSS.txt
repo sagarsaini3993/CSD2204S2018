@@ -5,7 +5,7 @@ C:\Users\735624>tee C:/Users/735642/Downloads/Day4LogSS.sql
 'tee' is not recognized as an internal or external command,
 operable program or batch file.
 
-C:\Users\735624>cd C:/xampp/mysql/bin
+C:\Users\736242>cd C:/xampp/mysql/bin
 
 C:\xampp\mysql\bin>mysql -u root -p
 Enter password:
