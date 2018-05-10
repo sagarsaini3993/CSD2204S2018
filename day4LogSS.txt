@@ -1,0 +1,958 @@
+Microsoft Windows [Version 10.0.16299.402]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\735624>tee C:/Users/735642/Downloads/Day4LogSS.sql
+'tee' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\735624>cd C:/xampp/mysql/bin
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 3
+Server version: 10.1.21-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2016, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> create database CSD2204S18;
+ERROR 1007 (HY000): Can't create database 'csd2204s18'; database exists
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| csd2204s18         |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+6 rows in set (0.00 sec)
+
+MariaDB [(none)]> show tables;
+ERROR 1046 (3D000): No database selected
+MariaDB [(none)]> desc customer;
+ERROR 1046 (3D000): No database selected
+MariaDB [(none)]> use database CSD2204S18;
+ERROR 1049 (42000): Unknown database 'database'
+MariaDB [(none)]> use csd2204s18;
+Database changed
+MariaDB [csd2204s18]> desc customer;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| custId     | varchar(5)  | NO   | PRI | NULL    |       |
+| name       | varchar(50) | YES  |     | NULL    |       |
+| nickname   | varchar(10) | YES  |     | NULL    |       |
+| city       | varchar(20) | YES  |     | NULL    |       |
+| postalcode | varchar(10) | YES  |     | NULL    |       |
+| age        | int(3)      | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+6 rows in set (0.06 sec)
+
+MariaDB [csd2204s18]> insert into customer values('c01','Ashley','Ash','
+    '> WDC','321200',''34';
+    '> );
+    '>
+    '> ;;
+    '> ByeCtrl-C -- exit!
+
+
+C:\xampp\mysql\bin>show tables;
+'show' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\xampp\mysql\bin>desc customer;
+'desc' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\xampp\mysql\bin>cd C:/xampp/mysql/bin
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 4
+Server version: 10.1.21-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2016, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use database csd2204s18;
+ERROR 1049 (42000): Unknown database 'database'
+MariaDB [(none)]> use csd2204s18;
+Database changed
+MariaDB [csd2204s18]> desc tables;
+ERROR 1146 (42S02): Table 'csd2204s18.tables' doesn't exist
+MariaDB [csd2204s18]> desc customer;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| custId     | varchar(5)  | NO   | PRI | NULL    |       |
+| name       | varchar(50) | YES  |     | NULL    |       |
+| nickname   | varchar(10) | YES  |     | NULL    |       |
+| city       | varchar(20) | YES  |     | NULL    |       |
+| postalcode | varchar(10) | YES  |     | NULL    |       |
+| age        | int(3)      | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+6 rows in set (0.01 sec)
+
+MariaDB [csd2204s18]> insert into customer values('C01','Ashley','Ash','WDC','321200','34');
+Query OK, 1 row affected (0.14 sec)
+
+MariaDB [csd2204s18]> desc customer;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| custId     | varchar(5)  | NO   | PRI | NULL    |       |
+| name       | varchar(50) | YES  |     | NULL    |       |
+| nickname   | varchar(10) | YES  |     | NULL    |       |
+| city       | varchar(20) | YES  |     | NULL    |       |
+| postalcode | varchar(10) | YES  |     | NULL    |       |
+| age        | int(3)      | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+6 rows in set (0.01 sec)
+
+MariaDB [csd2204s18]> insert into customer values('C02','Bob Marley','Bm','Toronto','100100','23');
+Query OK, 1 row affected (0.05 sec)
+
+MariaDB [csd2204s18]> insert into customer values('C03','Cherlies Theron','Cher','New York','120134','20');
+Query OK, 1 row affected (0.03 sec)
+
+MariaDB [csd2204s18]> insert into customer values('C04','Denial Jack','DJ','Brazil','341020','25');
+Query OK, 1 row affected (0.02 sec)
+
+MariaDB [csd2204s18]> insert into customer values('C05','Dona Newman','New','Toronto','130120','50');
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [csd2204s18]> insert into customer values('C06','Eston M.','M.','Toronto','201023','65');0
+Query OK, 1 row affected (0.01 sec)
+
+    ->
+    ->
+    ->
+    -> Ctrl-C -- exit!
+Bye
+
+C:\xampp\mysql\bin>cd C:/xampp/mysql/bin
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 5
+Server version: 10.1.21-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2016, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use csd2204s18;
+Database changed
+MariaDB [csd2204s18]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| csd2204s18         |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+6 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> desc customer;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| custId     | varchar(5)  | NO   | PRI | NULL    |       |
+| name       | varchar(50) | YES  |     | NULL    |       |
+| nickname   | varchar(10) | YES  |     | NULL    |       |
+| city       | varchar(20) | YES  |     | NULL    |       |
+| postalcode | varchar(10) | YES  |     | NULL    |       |
+| age        | int(3)      | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select age from customer;
++------+
+| age  |
++------+
+|   34 |
+|   23 |
+|   20 |
+|   25 |
+|   50 |
+|   65 |
++------+
+6 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> insert into customer values('C07','Bobby Chacko','Chac','New York','320300','70';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [csd2204s18]> insert into customer values('C07','Bobby Chacko','Chac','New York','320300','70');
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [csd2204s18]> insert into customer values('C08','Ashko Charles','AK','USA','421044','72');
+Query OK, 1 row affected (0.03 sec)
+
+MariaDB [csd2204s18]> insert into customer values('C09','Tony Special','Specie','GTA','418921','62');
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [csd2204s18]> insert into customer values('C10','Jack Sp','Sparrow','New Jersey','102301','35');
+Query OK, 1 row affected (0.03 sec)
+
+MariaDB [csd2204s18]> select * from customer;
++--------+-----------------+----------+------------+------------+------+
+| custId | name            | nickname | city       | postalcode | age  |
++--------+-----------------+----------+------------+------------+------+
+| C01    | Ashley          | Ash      | WDC        | 321200     |   34 |
+| C02    | Bob Marley      | Bm       | Toronto    | 100100     |   23 |
+| C03    | Cherlies Theron | Cher     | New York   | 120134     |   20 |
+| C04    | Denial Jack     | DJ       | Brazil     | 341020     |   25 |
+| C05    | Dona Newman     | New      | Toronto    | 130120     |   50 |
+| C06    | Eston M.        | M.       | Toronto    | 201023     |   65 |
+| C07    | Bobby Chacko    | Chac     | New York   | 320300     |   70 |
+| C08    | Ashko Charles   | AK       | USA        | 421044     |   72 |
+| C09    | Tony Special    | Specie   | GTA        | 418921     |   62 |
+| C10    | Jack Sp         | Sparrow  | New Jersey | 102301     |   35 |
++--------+-----------------+----------+------------+------------+------+
+10 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select custId from customer;
++--------+
+| custId |
++--------+
+| C01    |
+| C02    |
+| C03    |
+| C04    |
+| C05    |
+| C06    |
+| C07    |
+| C08    |
+| C09    |
+| C10    |
++--------+
+10 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select name, nickname from customer;
++-----------------+----------+
+| name            | nickname |
++-----------------+----------+
+| Ashley          | Ash      |
+| Bob Marley      | Bm       |
+| Cherlies Theron | Cher     |
+| Denial Jack     | DJ       |
+| Dona Newman     | New      |
+| Eston M.        | M.       |
+| Bobby Chacko    | Chac     |
+| Ashko Charles   | AK       |
+| Tony Special    | Specie   |
+| Jack Sp         | Sparrow  |
++-----------------+----------+
+10 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select custId from customer where name is Ashley;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Ashley' at line 1
+MariaDB [csd2204s18]> select city, postal code from customer;
+ERROR 1054 (42S22): Unknown column 'postal' in 'field list'
+MariaDB [csd2204s18]> select city, postal from customer;
+ERROR 1054 (42S22): Unknown column 'postal' in 'field list'
+MariaDB [csd2204s18]> select city, postalCode from customer;
++------------+------------+
+| city       | postalCode |
++------------+------------+
+| WDC        | 321200     |
+| Toronto    | 100100     |
+| New York   | 120134     |
+| Brazil     | 341020     |
+| Toronto    | 130120     |
+| Toronto    | 201023     |
+| New York   | 320300     |
+| USA        | 421044     |
+| GTA        | 418921     |
+| New Jersey | 102301     |
++------------+------------+
+10 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where name =  'Ashley';
++--------+--------+----------+------+------------+------+
+| custId | name   | nickname | city | postalcode | age  |
++--------+--------+----------+------+------------+------+
+| C01    | Ashley | Ash      | WDC  | 321200     |   34 |
++--------+--------+----------+------+------------+------+
+1 row in set (0.03 sec)
+
+MariaDB [csd2204s18]> select * from custoer where name =  'Ash';
+ERROR 1146 (42S02): Table 'csd2204s18.custoer' doesn't exist
+MariaDB [csd2204s18]> select * from customer where name =  'Ash';
+Empty set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where name =  'Ashko Charles' && city = WDC;
+ERROR 1054 (42S22): Unknown column 'WDC' in 'where clause'
+MariaDB [csd2204s18]> select * from customer where name =  'Ashko Charles' && city =' WDC';
+Empty set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where name =  'Ashko Charles' && 'Ashley';
+Empty set, 4 warnings (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where name =  'Ashko Charles', 'Ashley';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 'Ashley'' at line 1
+MariaDB [csd2204s18]> select city from customer where name = 'Eston M.';
++---------+
+| city    |
++---------+
+| Toronto |
++---------+
+1 row in set (0.00 sec)
+
+MariaDB [csd2204s18]> select city from customer where name = 'Eston M.' && nickname = 'M.';
++---------+
+| city    |
++---------+
+| Toronto |
++---------+
+1 row in set (0.00 sec)
+
+MariaDB [csd2204s18]> select name,city from customer where city = 'Toronto';
++-------------+---------+
+| name        | city    |
++-------------+---------+
+| Bob Marley  | Toronto |
+| Dona Newman | Toronto |
+| Eston M.    | Toronto |
++-------------+---------+
+3 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select name,city from customer where city != 'Toronto';
++-----------------+------------+
+| name            | city       |
++-----------------+------------+
+| Ashley          | WDC        |
+| Cherlies Theron | New York   |
+| Denial Jack     | Brazil     |
+| Bobby Chacko    | New York   |
+| Ashko Charles   | USA        |
+| Tony Special    | GTA        |
+| Jack Sp         | New Jersey |
++-----------------+------------+
+7 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select name,city from customer where city <> 'Toronto';
++-----------------+------------+
+| name            | city       |
++-----------------+------------+
+| Ashley          | WDC        |
+| Cherlies Theron | New York   |
+| Denial Jack     | Brazil     |
+| Bobby Chacko    | New York   |
+| Ashko Charles   | USA        |
+| Tony Special    | GTA        |
+| Jack Sp         | New Jersey |
++-----------------+------------+
+7 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select name from customer where age > 50;
++---------------+
+| name          |
++---------------+
+| Eston M.      |
+| Bobby Chacko  |
+| Ashko Charles |
+| Tony Special  |
++---------------+
+4 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select name from customer where age = 50;
++-------------+
+| name        |
++-------------+
+| Dona Newman |
++-------------+
+1 row in set (0.00 sec)
+
+MariaDB [csd2204s18]> select name from customer where age  != 50;
++-----------------+
+| name            |
++-----------------+
+| Ashley          |
+| Bob Marley      |
+| Cherlies Theron |
+| Denial Jack     |
+| Eston M.        |
+| Bobby Chacko    |
+| Ashko Charles   |
+| Tony Special    |
+| Jack Sp         |
++-----------------+
+9 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where name > 'Ashley';
++--------+-----------------+----------+------------+------------+------+
+| custId | name            | nickname | city       | postalcode | age  |
++--------+-----------------+----------+------------+------------+------+
+| C02    | Bob Marley      | Bm       | Toronto    | 100100     |   23 |
+| C03    | Cherlies Theron | Cher     | New York   | 120134     |   20 |
+| C04    | Denial Jack     | DJ       | Brazil     | 341020     |   25 |
+| C05    | Dona Newman     | New      | Toronto    | 130120     |   50 |
+| C06    | Eston M.        | M.       | Toronto    | 201023     |   65 |
+| C07    | Bobby Chacko    | Chac     | New York   | 320300     |   70 |
+| C09    | Tony Special    | Specie   | GTA        | 418921     |   62 |
+| C10    | Jack Sp         | Sparrow  | New Jersey | 102301     |   35 |
++--------+-----------------+----------+------------+------------+------+
+8 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where name < 'Ashley';
++--------+---------------+----------+------+------------+------+
+| custId | name          | nickname | city | postalcode | age  |
++--------+---------------+----------+------+------------+------+
+| C08    | Ashko Charles | AK       | USA  | 421044     |   72 |
++--------+---------------+----------+------+------------+------+
+1 row in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where name < 'Donna';
++--------+-----------------+----------+----------+------------+------+
+| custId | name            | nickname | city     | postalcode | age  |
++--------+-----------------+----------+----------+------------+------+
+| C01    | Ashley          | Ash      | WDC      | 321200     |   34 |
+| C02    | Bob Marley      | Bm       | Toronto  | 100100     |   23 |
+| C03    | Cherlies Theron | Cher     | New York | 120134     |   20 |
+| C04    | Denial Jack     | DJ       | Brazil   | 341020     |   25 |
+| C05    | Dona Newman     | New      | Toronto  | 130120     |   50 |
+| C07    | Bobby Chacko    | Chac     | New York | 320300     |   70 |
+| C08    | Ashko Charles   | AK       | USA      | 421044     |   72 |
++--------+-----------------+----------+----------+------------+------+
+7 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer;
++--------+-----------------+----------+------------+------------+------+
+| custId | name            | nickname | city       | postalcode | age  |
++--------+-----------------+----------+------------+------------+------+
+| C01    | Ashley          | Ash      | WDC        | 321200     |   34 |
+| C02    | Bob Marley      | Bm       | Toronto    | 100100     |   23 |
+| C03    | Cherlies Theron | Cher     | New York   | 120134     |   20 |
+| C04    | Denial Jack     | DJ       | Brazil     | 341020     |   25 |
+| C05    | Dona Newman     | New      | Toronto    | 130120     |   50 |
+| C06    | Eston M.        | M.       | Toronto    | 201023     |   65 |
+| C07    | Bobby Chacko    | Chac     | New York   | 320300     |   70 |
+| C08    | Ashko Charles   | AK       | USA        | 421044     |   72 |
+| C09    | Tony Special    | Specie   | GTA        | 418921     |   62 |
+| C10    | Jack Sp         | Sparrow  | New Jersey | 102301     |   35 |
++--------+-----------------+----------+------------+------------+------+
+10 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select name,city from customer where name = 'Ashley' || city = 'Toronto';
++-------------+---------+
+| name        | city    |
++-------------+---------+
+| Ashley      | WDC     |
+| Bob Marley  | Toronto |
+| Dona Newman | Toronto |
+| Eston M.    | Toronto |
++-------------+---------+
+4 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select city from customer where city = 'New York' || 'Toronto';
++----------+
+| city     |
++----------+
+| New York |
+| New York |
++----------+
+2 rows in set, 4 warnings (0.00 sec)
+
+MariaDB [csd2204s18]> select name from customer where city = 'New York' || 'Toronto';
++-----------------+
+| name            |
++-----------------+
+| Cherlies Theron |
+| Bobby Chacko    |
++-----------------+
+2 rows in set, 4 warnings (0.02 sec)
+
+MariaDB [csd2204s18]> select name,city from customer where city = 'New York' || 'Toronto';
++-----------------+----------+
+| name            | city     |
++-----------------+----------+
+| Cherlies Theron | New York |
+| Bobby Chacko    | New York |
++-----------------+----------+
+2 rows in set, 4 warnings (0.00 sec)
+
+MariaDB [csd2204s18]> select name,age from customer where city = 'Toronto' &&  age > '50';
++----------+------+
+| name     | age  |
++----------+------+
+| Eston M. |   65 |
++----------+------+
+1 row in set (0.00 sec)
+
+MariaDB [csd2204s18]> select name,city from customer where city = 'New York' AND 'Toronto';
+Empty set, 4 warnings (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where city = 'Toronto';
++--------+-------------+----------+---------+------------+------+
+| custId | name        | nickname | city    | postalcode | age  |
++--------+-------------+----------+---------+------------+------+
+| C02    | Bob Marley  | Bm       | Toronto | 100100     |   23 |
+| C05    | Dona Newman | New      | Toronto | 130120     |   50 |
+| C06    | Eston M.    | M.       | Toronto | 201023     |   65 |
++--------+-------------+----------+---------+------------+------+
+3 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select count(*) from customer where city = 'Toronto';
++----------+
+| count(*) |
++----------+
+|        3 |
++----------+
+1 row in set (0.03 sec)
+
+MariaDB [csd2204s18]> select count(*) "No. of customers in Toronto" from customer where city = 'Toronto';
++-----------------------------+
+| No. of customers in Toronto |
++-----------------------------+
+|                           3 |
++-----------------------------+
+1 row in set (0.00 sec)
+
+MariaDB [csd2204s18]> select* from customer;
++--------+-----------------+----------+------------+------------+------+
+| custId | name            | nickname | city       | postalcode | age  |
++--------+-----------------+----------+------------+------------+------+
+| C01    | Ashley          | Ash      | WDC        | 321200     |   34 |
+| C02    | Bob Marley      | Bm       | Toronto    | 100100     |   23 |
+| C03    | Cherlies Theron | Cher     | New York   | 120134     |   20 |
+| C04    | Denial Jack     | DJ       | Brazil     | 341020     |   25 |
+| C05    | Dona Newman     | New      | Toronto    | 130120     |   50 |
+| C06    | Eston M.        | M.       | Toronto    | 201023     |   65 |
+| C07    | Bobby Chacko    | Chac     | New York   | 320300     |   70 |
+| C08    | Ashko Charles   | AK       | USA        | 421044     |   72 |
+| C09    | Tony Special    | Specie   | GTA        | 418921     |   62 |
+| C10    | Jack Sp         | Sparrow  | New Jersey | 102301     |   35 |
++--------+-----------------+----------+------------+------------+------+
+10 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select count(*) "No. of customers with age more than 50" from customer where age > 50;
++----------------------------------------+
+| No. of customers with age more than 50 |
++----------------------------------------+
+|                                      4 |
++----------------------------------------+
+1 row in set (0.00 sec)
+
+MariaDB [csd2204s18]> select count(*) "No. of customers with age between 30 to 70" from customer where age > 30 && age < 70;
++--------------------------------------------+
+| No. of customers with age between 30 to 70 |
++--------------------------------------------+
+|                                          5 |
++--------------------------------------------+
+1 row in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where age > 30 && age < 70;
++--------+--------------+----------+------------+------------+------+
+| custId | name         | nickname | city       | postalcode | age  |
++--------+--------------+----------+------------+------------+------+
+| C01    | Ashley       | Ash      | WDC        | 321200     |   34 |
+| C05    | Dona Newman  | New      | Toronto    | 130120     |   50 |
+| C06    | Eston M.     | M.       | Toronto    | 201023     |   65 |
+| C09    | Tony Special | Specie   | GTA        | 418921     |   62 |
+| C10    | Jack Sp      | Sparrow  | New Jersey | 102301     |   35 |
++--------+--------------+----------+------------+------------+------+
+5 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where age between 30 and 70;
++--------+--------------+----------+------------+------------+------+
+| custId | name         | nickname | city       | postalcode | age  |
++--------+--------------+----------+------------+------------+------+
+| C01    | Ashley       | Ash      | WDC        | 321200     |   34 |
+| C05    | Dona Newman  | New      | Toronto    | 130120     |   50 |
+| C06    | Eston M.     | M.       | Toronto    | 201023     |   65 |
+| C07    | Bobby Chacko | Chac     | New York   | 320300     |   70 |
+| C09    | Tony Special | Specie   | GTA        | 418921     |   62 |
+| C10    | Jack Sp      | Sparrow  | New Jersey | 102301     |   35 |
++--------+--------------+----------+------------+------------+------+
+6 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where age > 30 && age <=\ 70;
+ERROR: Unknown command '\ '.
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\ 70' at line 1
+MariaDB [csd2204s18]> select * from customer where age > 30 && age <= 70;
++--------+--------------+----------+------------+------------+------+
+| custId | name         | nickname | city       | postalcode | age  |
++--------+--------------+----------+------------+------------+------+
+| C01    | Ashley       | Ash      | WDC        | 321200     |   34 |
+| C05    | Dona Newman  | New      | Toronto    | 130120     |   50 |
+| C06    | Eston M.     | M.       | Toronto    | 201023     |   65 |
+| C07    | Bobby Chacko | Chac     | New York   | 320300     |   70 |
+| C09    | Tony Special | Specie   | GTA        | 418921     |   62 |
+| C10    | Jack Sp      | Sparrow  | New Jersey | 102301     |   35 |
++--------+--------------+----------+------------+------------+------+
+6 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where age !> 30 && age !< 70;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '!> 30 && age !< 70' at line 1
+MariaDB [csd2204s18]> select * from customer where age >! 30 && age <! 70;
+Empty set (0.02 sec)
+
+MariaDB [csd2204s18]> select 'oldest customer'
+    -> ;
++-----------------+
+| oldest customer |
++-----------------+
+| oldest customer |
++-----------------+
+1 row in set (0.00 sec)
+
+MariaDB [csd2204s18]> select name,age from customer where age is max;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'max' at line 1
+MariaDB [csd2204s18]> select name,age from customer where age is maximum;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'maximum' at line 1
+MariaDB [csd2204s18]> select max(age) from customer;
++----------+
+| max(age) |
++----------+
+|       72 |
++----------+
+1 row in set (0.00 sec)
+
+MariaDB [csd2204s18]> select min(age) from customer;
++----------+
+| min(age) |
++----------+
+|       20 |
++----------+
+1 row in set (0.00 sec)
+
+MariaDB [csd2204s18]> select avg(age) from customer;
++----------+
+| avg(age) |
++----------+
+|  45.6000 |
++----------+
+1 row in set (0.00 sec)
+
+MariaDB [csd2204s18]> select 'List of customers whose name starts with B';
++--------------------------------------------+
+| List of customers whose name starts with B |
++--------------------------------------------+
+| List of customers whose name starts with B |
++--------------------------------------------+
+1 row in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where name = 'B%;r
+    '> ;
+    '>
+    '>
+    '>
+    '> Bye
+
+C:\xampp\mysql\bin>cd C:/xampp/mysql/bin
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 6
+Server version: 10.1.21-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2016, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use customer;
+ERROR 1049 (42000): Unknown database 'customer'
+MariaDB [(none)]> use database customer;
+ERROR 1049 (42000): Unknown database 'database'
+MariaDB [(none)]> use database csd2204s18;
+ERROR 1049 (42000): Unknown database 'database'
+MariaDB [(none)]> use csd2204s18;
+Database changed
+MariaDB [csd2204s18]> select * from customer where name LIKE '%n';
++--------+-----------------+----------+----------+------------+------+
+| custId | name            | nickname | city     | postalcode | age  |
++--------+-----------------+----------+----------+------------+------+
+| C03    | Cherlies Theron | Cher     | New York | 120134     |   20 |
+| C05    | Dona Newman     | New      | Toronto  | 130120     |   50 |
++--------+-----------------+----------+----------+------------+------+
+2 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where name LIKE '%b';
+Empty set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where name LIKE 'b%';
++--------+--------------+----------+----------+------------+------+
+| custId | name         | nickname | city     | postalcode | age  |
++--------+--------------+----------+----------+------------+------+
+| C02    | Bob Marley   | Bm       | Toronto  | 100100     |   23 |
+| C07    | Bobby Chacko | Chac     | New York | 320300     |   70 |
++--------+--------------+----------+----------+------------+------+
+2 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where name LIKE 'b%';
++--------+--------------+----------+----------+------------+------+
+| custId | name         | nickname | city     | postalcode | age  |
++--------+--------------+----------+----------+------------+------+
+| C02    | Bob Marley   | Bm       | Toronto  | 100100     |   23 |
+| C07    | Bobby Chacko | Chac     | New York | 320300     |   70 |
++--------+--------------+----------+----------+------------+------+
+2 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where name LIKE '%b';
+Empty set (0.00 sec)
+
+MariaDB [csd2204s18]> select name from customer where name LIKE '__n%';
++--------------+
+| name         |
++--------------+
+| Denial Jack  |
+| Dona Newman  |
+| Tony Special |
++--------------+
+3 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer LIMIT 4;
++--------+-----------------+----------+----------+------------+------+
+| custId | name            | nickname | city     | postalcode | age  |
++--------+-----------------+----------+----------+------------+------+
+| C01    | Ashley          | Ash      | WDC      | 321200     |   34 |
+| C02    | Bob Marley      | Bm       | Toronto  | 100100     |   23 |
+| C03    | Cherlies Theron | Cher     | New York | 120134     |   20 |
+| C04    | Denial Jack     | DJ       | Brazil   | 341020     |   25 |
++--------+-----------------+----------+----------+------------+------+
+4 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where age = '25', '34', '20';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' '34', '20'' at line 1
+MariaDB [csd2204s18]> select * from customer where age = '25','34','20';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''34','20'' at line 1
+MariaDB [csd2204s18]> select * from customer where age IN (20,25,65,72);
++--------+-----------------+----------+----------+------------+------+
+| custId | name            | nickname | city     | postalcode | age  |
++--------+-----------------+----------+----------+------------+------+
+| C03    | Cherlies Theron | Cher     | New York | 120134     |   20 |
+| C04    | Denial Jack     | DJ       | Brazil   | 341020     |   25 |
+| C06    | Eston M.        | M.       | Toronto  | 201023     |   65 |
+| C08    | Ashko Charles   | AK       | USA      | 421044     |   72 |
++--------+-----------------+----------+----------+------------+------+
+4 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where age IN (20,25,65,72,100);
++--------+-----------------+----------+----------+------------+------+
+| custId | name            | nickname | city     | postalcode | age  |
++--------+-----------------+----------+----------+------------+------+
+| C03    | Cherlies Theron | Cher     | New York | 120134     |   20 |
+| C04    | Denial Jack     | DJ       | Brazil   | 341020     |   25 |
+| C06    | Eston M.        | M.       | Toronto  | 201023     |   65 |
+| C08    | Ashko Charles   | AK       | USA      | 421044     |   72 |
++--------+-----------------+----------+----------+------------+------+
+4 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where age NOT IN (20,25,65,72,100);
++--------+--------------+----------+------------+------------+------+
+| custId | name         | nickname | city       | postalcode | age  |
++--------+--------------+----------+------------+------------+------+
+| C01    | Ashley       | Ash      | WDC        | 321200     |   34 |
+| C02    | Bob Marley   | Bm       | Toronto    | 100100     |   23 |
+| C05    | Dona Newman  | New      | Toronto    | 130120     |   50 |
+| C07    | Bobby Chacko | Chac     | New York   | 320300     |   70 |
+| C09    | Tony Special | Specie   | GTA        | 418921     |   62 |
+| C10    | Jack Sp      | Sparrow  | New Jersey | 102301     |   35 |
++--------+--------------+----------+------------+------------+------+
+6 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where city IN ('Toronto', 'GTA','USA' );
++--------+---------------+----------+---------+------------+------+
+| custId | name          | nickname | city    | postalcode | age  |
++--------+---------------+----------+---------+------------+------+
+| C02    | Bob Marley    | Bm       | Toronto | 100100     |   23 |
+| C05    | Dona Newman   | New      | Toronto | 130120     |   50 |
+| C06    | Eston M.      | M.       | Toronto | 201023     |   65 |
+| C08    | Ashko Charles | AK       | USA     | 421044     |   72 |
+| C09    | Tony Special  | Specie   | GTA     | 418921     |   62 |
++--------+---------------+----------+---------+------------+------+
+5 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer where city IN ('G%','T%','N%');
+Empty set (0.00 sec)
+
+MariaDB [csd2204s18]> select distinct(city) 'Unique Cities' from customer;
++---------------+
+| Unique Cities |
++---------------+
+| WDC           |
+| Toronto       |
+| New York      |
+| Brazil        |
+| USA           |
+| GTA           |
+| New Jersey    |
++---------------+
+7 rows in set (0.02 sec)
+
+MariaDB [csd2204s18]> select distinct(city) AS 'Unique Cities' from customer;
++---------------+
+| Unique Cities |
++---------------+
+| WDC           |
+| Toronto       |
+| New York      |
+| Brazil        |
+| USA           |
+| GTA           |
+| New Jersey    |
++---------------+
+7 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select count(distinct(city)) AS 'Unique Cities' from customer;
++---------------+
+| Unique Cities |
++---------------+
+|             7 |
++---------------+
+1 row in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer order by name;
++--------+-----------------+----------+------------+------------+------+
+| custId | name            | nickname | city       | postalcode | age  |
++--------+-----------------+----------+------------+------------+------+
+| C08    | Ashko Charles   | AK       | USA        | 421044     |   72 |
+| C01    | Ashley          | Ash      | WDC        | 321200     |   34 |
+| C02    | Bob Marley      | Bm       | Toronto    | 100100     |   23 |
+| C07    | Bobby Chacko    | Chac     | New York   | 320300     |   70 |
+| C03    | Cherlies Theron | Cher     | New York   | 120134     |   20 |
+| C04    | Denial Jack     | DJ       | Brazil     | 341020     |   25 |
+| C05    | Dona Newman     | New      | Toronto    | 130120     |   50 |
+| C06    | Eston M.        | M.       | Toronto    | 201023     |   65 |
+| C10    | Jack Sp         | Sparrow  | New Jersey | 102301     |   35 |
+| C09    | Tony Special    | Specie   | GTA        | 418921     |   62 |
++--------+-----------------+----------+------------+------------+------+
+10 rows in set (0.02 sec)
+
+MariaDB [csd2204s18]> select * from customer order by name ASc;
++--------+-----------------+----------+------------+------------+------+
+| custId | name            | nickname | city       | postalcode | age  |
++--------+-----------------+----------+------------+------------+------+
+| C08    | Ashko Charles   | AK       | USA        | 421044     |   72 |
+| C01    | Ashley          | Ash      | WDC        | 321200     |   34 |
+| C02    | Bob Marley      | Bm       | Toronto    | 100100     |   23 |
+| C07    | Bobby Chacko    | Chac     | New York   | 320300     |   70 |
+| C03    | Cherlies Theron | Cher     | New York   | 120134     |   20 |
+| C04    | Denial Jack     | DJ       | Brazil     | 341020     |   25 |
+| C05    | Dona Newman     | New      | Toronto    | 130120     |   50 |
+| C06    | Eston M.        | M.       | Toronto    | 201023     |   65 |
+| C10    | Jack Sp         | Sparrow  | New Jersey | 102301     |   35 |
+| C09    | Tony Special    | Specie   | GTA        | 418921     |   62 |
++--------+-----------------+----------+------------+------------+------+
+10 rows in set (0.02 sec)
+
+MariaDB [csd2204s18]> select * from customer order by name DESC;
++--------+-----------------+----------+------------+------------+------+
+| custId | name            | nickname | city       | postalcode | age  |
++--------+-----------------+----------+------------+------------+------+
+| C09    | Tony Special    | Specie   | GTA        | 418921     |   62 |
+| C10    | Jack Sp         | Sparrow  | New Jersey | 102301     |   35 |
+| C06    | Eston M.        | M.       | Toronto    | 201023     |   65 |
+| C05    | Dona Newman     | New      | Toronto    | 130120     |   50 |
+| C04    | Denial Jack     | DJ       | Brazil     | 341020     |   25 |
+| C03    | Cherlies Theron | Cher     | New York   | 120134     |   20 |
+| C07    | Bobby Chacko    | Chac     | New York   | 320300     |   70 |
+| C02    | Bob Marley      | Bm       | Toronto    | 100100     |   23 |
+| C01    | Ashley          | Ash      | WDC        | 321200     |   34 |
+| C08    | Ashko Charles   | AK       | USA        | 421044     |   72 |
++--------+-----------------+----------+------------+------------+------+
+10 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer order by age DESC;
++--------+-----------------+----------+------------+------------+------+
+| custId | name            | nickname | city       | postalcode | age  |
++--------+-----------------+----------+------------+------------+------+
+| C08    | Ashko Charles   | AK       | USA        | 421044     |   72 |
+| C07    | Bobby Chacko    | Chac     | New York   | 320300     |   70 |
+| C06    | Eston M.        | M.       | Toronto    | 201023     |   65 |
+| C09    | Tony Special    | Specie   | GTA        | 418921     |   62 |
+| C05    | Dona Newman     | New      | Toronto    | 130120     |   50 |
+| C10    | Jack Sp         | Sparrow  | New Jersey | 102301     |   35 |
+| C01    | Ashley          | Ash      | WDC        | 321200     |   34 |
+| C04    | Denial Jack     | DJ       | Brazil     | 341020     |   25 |
+| C02    | Bob Marley      | Bm       | Toronto    | 100100     |   23 |
+| C03    | Cherlies Theron | Cher     | New York   | 120134     |   20 |
++--------+-----------------+----------+------------+------------+------+
+10 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer order by age DESC LIMIT 2;
++--------+---------------+----------+----------+------------+------+
+| custId | name          | nickname | city     | postalcode | age  |
++--------+---------------+----------+----------+------------+------+
+| C08    | Ashko Charles | AK       | USA      | 421044     |   72 |
+| C07    | Bobby Chacko  | Chac     | New York | 320300     |   70 |
++--------+---------------+----------+----------+------------+------+
+2 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer order by age desc limit 2;
++--------+---------------+----------+----------+------------+------+
+| custId | name          | nickname | city     | postalcode | age  |
++--------+---------------+----------+----------+------------+------+
+| C08    | Ashko Charles | AK       | USA      | 421044     |   72 |
+| C07    | Bobby Chacko  | Chac     | New York | 320300     |   70 |
++--------+---------------+----------+----------+------------+------+
+2 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from (select * from customer order by age desc limit 2) as t order by age limit 1;
++--------+--------------+----------+----------+------------+------+
+| custId | name         | nickname | city     | postalcode | age  |
++--------+--------------+----------+----------+------------+------+
+| C07    | Bobby Chacko | Chac     | New York | 320300     |   70 |
++--------+--------------+----------+----------+------------+------+
+1 row in set (0.02 sec)
+
+MariaDB [csd2204s18]> select * from (select * from customer order by age asc limit 2) as t order by age limit 1;
++--------+-----------------+----------+----------+------------+------+
+| custId | name            | nickname | city     | postalcode | age  |
++--------+-----------------+----------+----------+------------+------+
+| C03    | Cherlies Theron | Cher     | New York | 120134     |   20 |
++--------+-----------------+----------+----------+------------+------+
+1 row in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer;
++--------+-----------------+----------+------------+------------+------+
+| custId | name            | nickname | city       | postalcode | age  |
++--------+-----------------+----------+------------+------------+------+
+| C01    | Ashley          | Ash      | WDC        | 321200     |   34 |
+| C02    | Bob Marley      | Bm       | Toronto    | 100100     |   23 |
+| C03    | Cherlies Theron | Cher     | New York   | 120134     |   20 |
+| C04    | Denial Jack     | DJ       | Brazil     | 341020     |   25 |
+| C05    | Dona Newman     | New      | Toronto    | 130120     |   50 |
+| C06    | Eston M.        | M.       | Toronto    | 201023     |   65 |
+| C07    | Bobby Chacko    | Chac     | New York   | 320300     |   70 |
+| C08    | Ashko Charles   | AK       | USA        | 421044     |   72 |
+| C09    | Tony Special    | Specie   | GTA        | 418921     |   62 |
+| C10    | Jack Sp         | Sparrow  | New Jersey | 102301     |   35 |
++--------+-----------------+----------+------------+------------+------+
+10 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> select * from customer order by age desc;
++--------+-----------------+----------+------------+------------+------+
+| custId | name            | nickname | city       | postalcode | age  |
++--------+-----------------+----------+------------+------------+------+
+| C08    | Ashko Charles   | AK       | USA        | 421044     |   72 |
+| C07    | Bobby Chacko    | Chac     | New York   | 320300     |   70 |
+| C06    | Eston M.        | M.       | Toronto    | 201023     |   65 |
+| C09    | Tony Special    | Specie   | GTA        | 418921     |   62 |
+| C05    | Dona Newman     | New      | Toronto    | 130120     |   50 |
+| C10    | Jack Sp         | Sparrow  | New Jersey | 102301     |   35 |
+| C01    | Ashley          | Ash      | WDC        | 321200     |   34 |
+| C04    | Denial Jack     | DJ       | Brazil     | 341020     |   25 |
+| C02    | Bob Marley      | Bm       | Toronto    | 100100     |   23 |
+| C03    | Cherlies Theron | Cher     | New York   | 120134     |   20 |
++--------+-----------------+----------+------------+------------+------+
+10 rows in set (0.00 sec)
+
+MariaDB [csd2204s18]> exit
+Bye
+
+C:\xampp\mysql\bin>
+
+C:\xampp\mysql\bin>
